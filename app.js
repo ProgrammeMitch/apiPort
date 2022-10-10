@@ -4,7 +4,14 @@ const bodyParser = require('body-parser')
 const { mongoose } = require('./db/mongoose')
 const jwt = require('jsonwebtoken');
 require('dotenv').config();
-//heroku test
+
+//production condition
+if (process.env.NODE_ENV === "production") {
+    app.use(express.static("build"));
+    app.get("*", (req, res) => {
+      res.sendFile(path.resolve(__dirname,  "build", "index.html"));
+    });
+  }
 
 //LOAD MONGOOSE MODELS
 const { wallets, User, cycle } = require('./db/models/index');
