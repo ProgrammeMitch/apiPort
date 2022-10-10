@@ -18,8 +18,5 @@
     "lodash": "^4.17.21",
     "mongoose": "^6.6.5",
     "nodemon": "^2.0.20"
-  },
-  "scripts": { 
-    "heroku-postbuild": "npm install --prefix client && npm run build --prefix client"
   }
 }
