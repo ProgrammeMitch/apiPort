@@ -363,6 +363,6 @@ app.delete('/cycles/:id', (req, res) => {
     })
 })
 
-app.listen(process.env.MONGODB_URI || 3000, () => {
+app.listen(process.env.PORT || 3000, '0.0.0.0', () => {
     console.log("Server is listening on port 3000")
 })
