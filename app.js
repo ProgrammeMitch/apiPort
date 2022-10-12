@@ -321,6 +321,9 @@ app.get('/cycles/:id', (req, res) => {
 })
 
 //Admin Routes
+app.get('/', () => {
+    console.log("Home Page")
+})
 
 app.get('/users', (req, res) => {
     //Retrieve all users
