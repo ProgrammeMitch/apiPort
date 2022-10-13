@@ -7,6 +7,7 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/CycleBeta
     console.log("Connected to MongoDB succesfully");
 }).catch((e) => {
     console.log("Error while attempting to conect to MongoDB");
+    console.log(e);
 });
 
 //Prevent Deprecation warnings (from MongoDB native driver)
