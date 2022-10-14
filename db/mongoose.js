@@ -3,7 +3,7 @@
 const mongoose = require('mongoose');
 
 mongoose.Promise = global.Promise;
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/CycleBeta11?directConnection=true', {useNewUrlParser: true}).then(() => {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://cyclebetamongodb:all4sharon@cluster0.b38bhcn.mongodb.net/?retryWrites=true&w=majority', {useNewUrlParser: true}).then(() => {
     console.log("Connected to MongoDB succesfully");
 }).catch((e) => {
     console.log("Error while attempting to conect to MongoDB");
